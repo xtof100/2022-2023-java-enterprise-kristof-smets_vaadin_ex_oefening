@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+
+Item name:<input id="input" type="text"></input>
+<input id="submit" type="submit" value="Store"></input>
+<div>Card:</div>
+<div id="placeholder"></div>
+
+<script>
+    $(document).ready(function () {
+        $.get("Ex2Servlet", function (data) {
+            $("#placeholder").html(data);
+        });
+        $("#submit").click(function (event) {
+            const input = $("#input").val();
+            $.post("Ex2Servlet",{ name: input}, function (data) {
+                $("#placeholder").html(data);
+            });
+            event.preventDefault();
+        });
+    });
+</script>
+</body>
+</html>

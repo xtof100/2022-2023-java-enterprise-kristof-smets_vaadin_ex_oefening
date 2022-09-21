@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+
+<input id="input" type="text"></input>
+<input id="submit" type="submit" value="Submit"></input>
+<div id="placeholder"></div>
+
+<script>
+    $(document).ready(function () {
+        $("#submit").click(function (event) {
+            const input = $("#input").val();
+            $.get("Ex3Servlet", {"term": input}, function (data) {
+                $("#placeholder").html(data);
+            });
+            event.preventDefault();
+        });
+    });
+</script>
+</body>
+</html>
