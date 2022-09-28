@@ -123,6 +123,7 @@
 
     <modules>
         <module>servletfilter</module>
+        <module>vaadin</module>
     </modules>
 
     <dependencyManagement>
