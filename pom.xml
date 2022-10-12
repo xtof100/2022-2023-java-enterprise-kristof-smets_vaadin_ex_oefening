@@ -124,6 +124,7 @@
     <modules>
         <module>servletfilter</module>
         <module>vaadin</module>
+        <module>assignments</module>
     </modules>
 
     <dependencyManagement>
