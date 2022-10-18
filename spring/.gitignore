@@ -1,0 +1,9 @@
+frontend/generated
+.npmrc
+node_modules
+package.json
+pnpm-lock.yaml
+pnpfile.js
+tsconfig.json
+types.d.ts
+webpack*
