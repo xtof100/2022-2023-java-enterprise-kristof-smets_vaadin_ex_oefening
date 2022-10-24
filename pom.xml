@@ -125,8 +125,9 @@
         <module>servletfilter</module>
         <module>vaadin</module>
         <module>assignments</module>
-	  <module>spring</module>
+ 	<module>spring</module>
         <module>spring-client</module>
+        <module>jpa</module>
     </modules>
 
     <dependencyManagement>
