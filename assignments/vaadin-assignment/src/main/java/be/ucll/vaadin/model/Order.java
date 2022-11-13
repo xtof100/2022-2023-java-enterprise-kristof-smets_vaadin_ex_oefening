@@ -20,6 +20,9 @@ public class Order implements Serializable {
 	private int deliveryDays;
 	private BigDecimal totalOrderPrice;
 
+	public Order() {
+	}
+
 	public Order(Long id, String orderId, String customerId, boolean delivered, int deliveryDays, Product... products) {
 		this.id = id;
 		this.orderId = orderId;

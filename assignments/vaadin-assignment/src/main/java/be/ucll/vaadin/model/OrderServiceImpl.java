@@ -64,6 +64,24 @@ public class OrderServiceImpl implements OrderService, Serializable {
 
 			// TODO add code for filtering orders based on the criteria
 			// 'numberOfProducts' and 'delivered'
+			//delivered
+			if(orderSearchCriteria.getDelivered().equals(true) )
+			{
+				if(order.isDelivered())
+				{
+					shouldAdd = true;
+				}
+
+			}
+
+			//numberOfProducts
+			if(orderSearchCriteria.getNumberOfProducts()!= null)
+			{
+				if(order.getProducts().size() == orderSearchCriteria.getNumberOfProducts()) {
+					shouldAdd = true;
+				}
+			}
+
 
 			if (shouldAdd) {
 				matchedOrders.add(order);
